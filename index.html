@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>瓷器</title>
+  <link rel="stylesheet" href="style/index.css" />
+  <link rel="stylesheet" href="style/swiper.css" />
+  <link rel="stylesheet" href="style/home.css">
+</head>
+
+<body>
+  <!-- 头部导航 -->
+  <header id="header"></header>
+  <!-- 首页轮播 -->
+  <div class="swiper-box">
+    <!-- 轮播列表 -->
+    <div class="box">
+      <div class="item"><img src="images/home/swiper1.webp" alt="" /></div>
+      <div class="item"><img src="images/home/swiper2.webp" alt="" /></div>
+      <div class="item"><img src="images/home/swiper3.webp" alt="" /></div>
+      <div class="item"><img src="images/home/swiper4.webp" alt="" /></div>
+      <!-- 实现无缝轮播 -->
+      <div class="item"><img src="images/home/swiper1.webp" alt="" /></div>
+    </div>
+    <!-- 指示器 -->
+    <div class="point-box">
+      <div class="point active"></div>
+      <div class="point"></div>
+      <div class="point"></div>
+      <div class="point"></div>
+    </div>
+    <!-- 左右箭头 -->
+    <div class="btn-item prev">&#10094;</div>
+    <div class="btn-item next">&#10095;</div>
+  </div>
+  <!-- 首页内容 -->
+  <div class="home-video-box max-width">
+    <video src="images/home/home.mp4" controls loop autoplay></video>
+    <div class="play-btn">Click to play video</div>
+    <div class="video-text">
+      <h4>关 / 于 / 大 / 鱼 / 海 / 棠</h4>
+      所有活着的人类，都是海里一条巨大的鱼；出生的时候他们从海的此岸出发。他们的生命就像横越大海，有时相遇，有时分开。死的时候，他们便到了岸，各去各的世界。四十五亿年前，这个星球上，只有一片汪洋大海，和一群古老的大鱼。在与人类世界平行的空间里，生活着一个规规矩矩、遵守秩序的族群，他们为神工作，掌管世界万物运行规律，也掌管人类的灵魂。他们的天空与人类世界的大海相连。他们既不是神，也不是人，他们是“其他人”......
+    </div>
+  </div>
+
+  <div class="home-content max-width">
+    <img src="images/home/home1.webp" class="content-img">
+    <div class="content-text">
+      <h4>剧 / 情 / 简 / 介</h4>
+      在海底世界的“神之围楼”里居住着的一群“其他人”，他们是执掌着世间万物的神，每一个16岁的族人都要去往人间巡游，这个传统也被视为他们成人的仪式。“椿”（季冠霖 配）是一个能够控制植物生长的女孩
+      ，在“椿”16岁的时候，她依照祖训穿过海底天空到人间。在人间的“椿”化身为一尾红色的鱼，暴风雨的夜里，“椿”不幸被渔网困住无法脱身，人类的男孩“鲲”（许魏洲
+      配）为了帮助“椿”逃脱困境，被海底旋涡卷走葬身大海。结束人间巡礼的“椿”回到海底世界的“神之围楼“，“椿”无法面对鲲为救自己而死。
+    </div>
+    <img src="images/home/home2.webp" class="content-left">
+  </div>
+
+  <!-- 底部 -->
+  <footer id="footer"></footer>
+
+  <script src="./script/swiper.js"></script>
+  <script src="./script/index.js"></script>
+  <script>
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.querySelector("#header").innerHTML = data;
+        // setMenu(0);
+        setSubMenu(0);
+      });
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.querySelector("#footer").innerHTML = data;
+        // setMenu(0);
+        setSubMenu(0);
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>瓷器</title>
+  <link rel="stylesheet" href="./style/index.css" />
+</head>
+
+<body>
+  <!-- 头部导航 -->
+  <header id="header"></header>
+  <!-- 瓷器发展内容 -->
+  <div class="develop-content">123456</div>
+
+  <!-- 底部 -->
+  <footer id="footer"></footer>
+
+  <script src="./script/index.js"></script>
+  <script>
+    fetch("./header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.querySelector("#header").innerHTML = data;
+        // setMenu(1);
+        setSubMenu(1, 0);
+      });
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.querySelector("#footer").innerHTML = data;
+        // setMenu(0);
+        setSubMenu(0);
+      });
+  </script>
+</body>
+
+</html>
