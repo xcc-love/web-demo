@@ -4,6 +4,9 @@ body {
   margin: 0;
   font-size: 16px;
 }
+body {
+  padding-top: 60px;
+}
 a {
   color: #000;
   text-decoration: none;
@@ -23,7 +26,11 @@ a {
   align-items: center;
   border: 1px solid #eee;
   background-color: #f7f7f7;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 .herder-box .logo {
   width: 20%;
